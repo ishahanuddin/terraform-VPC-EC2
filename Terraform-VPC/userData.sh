@@ -1,4 +1,4 @@
 sudo yum update -y
-sudo amazon-linux-extras install nginx1.12 -y
+sudo yum install nginx -y
 sudo service nginx start
 sudo chkconfig nginx on
