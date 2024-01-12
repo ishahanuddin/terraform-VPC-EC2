@@ -19,7 +19,7 @@ data "aws_subnet" "public_subnet_1"{
 #   public_key = tls_private_key.tls_key.public_key_openssh
 # }
 
-resource "aws_instance" "Terraform_Assignment_EC2"{
+resource "aws_instance" "EC2_Terraform_Assignment"{
     ami = "ami-02a66cf05465c373f"
     instance_type = "t2.micro"
     tags = {
