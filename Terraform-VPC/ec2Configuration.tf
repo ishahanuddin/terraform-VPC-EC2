@@ -26,20 +26,10 @@ resource "aws_instance" "EC2-Terraform_Project"{
         Name = "Terraform Assignment: EC2"
     }
     key_name = var.key_name
-    # user_data = file("userData.sh")
     subnet_id = data.aws_subnet.public_subnet_1.id
     vpc_security_group_ids = [aws_security_group.web_sg.id]
     associate_public_ip_address = true
     # user_data_replace_on_change = true
-
-    # provisioner "remote-exec" {
-    #     inline = [
-    #     "sudo yum update -y",
-    #     "sudo amazon-linux-extras install nginx1.12 -y",
-    #     "sudo service nginx start",
-    #     "sudo chkconfig nginx on"
-    #     ]
-    # }
 
     user_data = <<EOF
      #!/bin/bash
